@@ -1,0 +1,16 @@
+<div class='counter-container'>
+  <div class='currentTime'>
+      {{currentTime}}
+  </div>
+
+  <button class='start' (click)="start()"> START </button>
+  <button class='stop' (click)="stop()"> STOP </button>
+  <button class='step' (click)="step()"> STEP </button>
+  <button class='reset' (click)="reset()"> RESET </button>
+
+  <div class='stepsContainer'>
+     <p *ngFor="let step of steps">
+      {{step}}
+     </p>
+  </div>
+</div>

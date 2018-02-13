@@ -1,3 +1,9 @@
-<p>
-  single-alarm works!
-</p>
+<form>
+    <!--
+    <input id="time" type="time" [(ngModel)]='alarmTime'>
+    -->
+    <input type='date' name="alarmDate" [(ngModel)]="alarmDate" value="{{ alarmDate }}">
+    <input type='time' name="alarmTime" [(ngModel)]="alarmTime" value="{{ alarmTime }}">
+    <br><span>{{ message }}</span>
+    <button class='set' (click)='setAlarm()'> Add new alarm </button>
+</form>

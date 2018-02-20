@@ -1,0 +1,21 @@
+
+<form>
+    <input type='date' name="alarmDate" [(ngModel)]="alarmDate" value="{{ alarmDate }}">
+    <input type='time' name="alarmTime" [(ngModel)]="alarmTime" value="{{ alarmTime }}">
+    <button class='set' (click)='setAlarm()'> Add new alarm </button>
+</form>
+
+<li *ngFor="let alarm of alarms" [class.selected]="alarm === selectedAlarm" >
+    <ul *ngIf="alarm.alarmId">
+        <div >
+            <a routerLink="/detail/{{alarm.alarmId}}" id='{{ alarm.alarmId }}'>
+                <span> {{ alarm.alarmId   }}   </span>
+                <span> {{ alarm.alarmTime }}   </span> 
+                <span> {{ alarm.alarmDate }}   </span>
+            </a>
+            <span (click)='removeAlarm( alarm.alarmId )'> USUN MNIE </span>
+        </div>
+    </ul>
+</li>
+
+<app-alarm-detail [alarm]="selectedAlarm"></app-alarm-detail>

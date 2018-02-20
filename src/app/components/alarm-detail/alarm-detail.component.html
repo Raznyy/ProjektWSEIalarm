@@ -1,0 +1,14 @@
+<div *ngIf="alarm">
+
+    <h2>{{ alarm.alarmTime }}</h2>
+    <div><span>id: </span>{{alarm.alarmId}}</div>
+    <div>
+        <label>Time:
+            <input type='time' [(ngModel)]="alarm.alarmTime" >
+        </label>
+        <label>Date:
+            <input type='date' [(ngModel)]="alarm.alarmDate" value="alarm.alarmDate" >
+        </label>
+    </div>
+  
+  </div>

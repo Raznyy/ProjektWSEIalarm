@@ -1,6 +1,19 @@
 <div class='main-container'>
 
   <div class='currentTime'>
+      Current time is: <br>
+      <app-current-time></app-current-time>
+    </div>
+  <nav>
+    <a routerLink="/alarms">Alarms</a>
+    <a routerLink="/counter">Counter</a>
+  </nav>
+
+  <router-outlet></router-outlet>
+
+  <app-notification></app-notification>
+
+  <!-- <div class='currentTime'>
     Current time is: <br>
     <app-current-time></app-current-time>
   </div>
@@ -11,5 +24,5 @@
   <br>
   <div class='counter'>
     <app-counter></app-counter>
-  </div>
+  </div> -->
 </div>
